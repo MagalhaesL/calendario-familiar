@@ -77,10 +77,10 @@ class _HomeScreenState extends State<HomeScreen> {
               }
             },
             itemBuilder: (context) => [
-              PopupMenuItem(
+              const PopupMenuItem(
                 value: 'logout',
                 child: Row(
-                  children: const [
+                  children: [
                     Icon(Icons.logout, color: Colors.red),
                     SizedBox(width: 8),
                     Text('Sair'),

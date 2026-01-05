@@ -50,7 +50,7 @@ class AuthService {
 
       return null;
     } catch (e) {
-      print('Error signing in with Google: $e');
+      // Error is rethrown to be handled by the provider layer
       rethrow;
     }
   }
@@ -61,7 +61,7 @@ class AuthService {
       await _googleSignIn.signOut();
       await _auth.signOut();
     } catch (e) {
-      print('Error signing out: $e');
+      // Error is rethrown to be handled by the provider layer
       rethrow;
     }
   }

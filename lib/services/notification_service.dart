@@ -21,7 +21,7 @@ class NotificationService {
       initializationSettings,
       onDidReceiveNotificationResponse: (NotificationResponse response) async {
         // Handle notification tap
-        print('Notification tapped: ${response.payload}');
+        // TODO: Navigate to event detail screen using payload
       },
     );
 

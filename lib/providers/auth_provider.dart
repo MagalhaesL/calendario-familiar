@@ -53,11 +53,8 @@ class AuthProvider with ChangeNotifier {
       _isLoading = true;
       notifyListeners();
 
-      final user = await authService.signInWithGoogle();
-      
-      if (user != null) {
-        _user = user;
-      }
+      // The _init() listener will handle setting _user
+      await authService.signInWithGoogle();
       
       _isLoading = false;
       notifyListeners();

@@ -55,7 +55,8 @@ class FamilyProvider with ChangeNotifier {
         notifyListeners();
       });
     } catch (e) {
-      print('Error syncing with Firestore: $e');
+      // Sync errors are logged but don't block offline functionality
+      _errorMessage = 'Sync error: ${e.toString()}';
     }
   }
 
